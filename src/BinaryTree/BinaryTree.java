@@ -126,8 +126,6 @@ public class BinaryTree<T extends Comparable<T>> {
             } else {
                 root.setRight(removeNode(root.getRight(), content));
             }
-        } else {
-            return root;
         }
         return root;
     }
