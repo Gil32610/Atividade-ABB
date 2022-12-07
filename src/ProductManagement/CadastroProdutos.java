@@ -15,6 +15,7 @@ public class CadastroProdutos {
         Produto p;
         String code;
         String descrip;
+        String fornecedor;
         double price;
         int invent;
         Scanner s = new Scanner(System.in);
@@ -24,9 +25,11 @@ public class CadastroProdutos {
         price = Double.parseDouble(s.nextLine());
         System.out.println("Informe o estoque:");
         invent = Integer.parseInt(s.nextLine());
+        System.out.println("Informe o fornecedor:");
+        fornecedor = s.nextLine();
         System.out.println("Informe o código:");
         code = s.nextLine();
-        p = new Produto(code, descrip, price, invent);
+        p = new Produto(code, fornecedor, descrip, price, invent);
         this.Cadastro.insert(p);
         System.out.println("Procedimento concluído");
     }

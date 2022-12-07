@@ -3,14 +3,16 @@ package Produtos;
 public class Produto implements Comparable<Produto> {
     private String code;
     private String descrip;
+    private String fornecedor;
     private double price;
     private int invent;
 
-    public Produto(String code, String descrip, double price, int invent) {
+    public Produto(String code, String fornecedor, String descrip, double price, int invent) {
         this.code = code;
         this.price = price;
         this.invent = invent;
         this.descrip = descrip;
+        this.fornecedor = fornecedor;
     }
 
     public Produto(String code, String descrip) {
@@ -48,6 +50,14 @@ public class Produto implements Comparable<Produto> {
 
     public String getDescrip() {
         return this.descrip;
+    }
+
+    public String getFornecedor() {
+        return this.fornecedor;
+    }
+
+    public void setFornecedor(String fornecedor) {
+        this.fornecedor = fornecedor;
     }
 
     @Override
