@@ -1,5 +1,7 @@
 package BinaryTree;
 
+import java.util.Queue;
+
 public class BinaryTree<T extends Comparable<T>> {
     private Node<T> root;
 
@@ -128,6 +130,14 @@ public class BinaryTree<T extends Comparable<T>> {
             }
         }
         return root;
+    }
+
+    public T find(T value) {
+        if (this.isEmpty() == true) {
+            return null;
+        } else {
+            return this.root.findNode(value);
+        }
     }
 
 }

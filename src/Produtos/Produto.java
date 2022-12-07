@@ -12,7 +12,8 @@ public class Produto implements Comparable<Produto> {
         this.invent = invent;
         this.descrip = descrip;
     }
-    public Produto(String code, String descrip){
+
+    public Produto(String code, String descrip) {
         this.descrip = descrip;
         this.code = code;
     }
@@ -26,7 +27,7 @@ public class Produto implements Comparable<Produto> {
     }
 
     public void setInvent(int invent) {
-        this.invent = invent;
+        this.invent += invent;
     }
 
     public void setDescrip(String descrip) {
